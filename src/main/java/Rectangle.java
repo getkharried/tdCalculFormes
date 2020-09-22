@@ -12,17 +12,33 @@ public class Rectangle extends Polygone {
 	public Rectangle(Point[] coordonnees) throws IllegalArgumentException {
 		super(coordonnees);
 		
-		for(Point pointTestY : coordonnees) {
-			boolean testMemeY = false;
+		boolean error = false;
+		
+		for(Point pointTestX : coordonnees) {
+			int checkMemeX = 0;
 			
-			for(Point pointTestY2 : coordonnees) {
-				if(pointTestY.getCoordonneesY() == pointTestY2.getCoordonneesY()) {
-					testMemeY = true;
+			for(Point pointTestX2 : coordonnees) {
+				if(pointTestX.getCoordonneesX() == pointTestX2.getCoordonneesX()) {
+					checkMemeX++;
 				}
 			}
 			
-			if(!testMemeY) throw new IllegalArgumentException("Le rectangle n'est pas plat !");
+			if(checkMemeX < 2) error = true;
 		}
+		
+		for(Point pointTestY : coordonnees) {
+			int checkMemeY = 0;
+			
+			for(Point pointTestY2 : coordonnees) {
+				if(pointTestY.getCoordonneesY() == pointTestY2.getCoordonneesY()) {
+					checkMemeY++;
+				}
+			}
+			
+			if(checkMemeY < 2) error = true;
+		}
+		
+		if(error) throw new IllegalArgumentException("Le rectangle n'est pas plat !");
 	}
 	
 	public Rectangle(Point sg, Point id) {
