@@ -45,6 +45,15 @@ public class Rectangle extends Polygone {
 		this(sommetsToCoordonnees(sg, id));
 	}
 	
+	/**
+	 * 
+	 * @param sg
+	 * @param id
+	 * @return coordonnees
+	 * 
+	 * Donne les coordonnées complètes d'un rectangle à partir de ses sommets
+	 * supérieur gauche et inférieur droit.
+	 */
 	public static Point[] sommetsToCoordonnees(Point sg, Point id) {
 		Point sd = new Point(id.getCoordonneesX(), sg.getCoordonneesY());
 		Point ig = new Point(sg.getCoordonneesX(), id.getCoordonneesY());

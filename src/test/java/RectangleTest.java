@@ -6,8 +6,14 @@ public class RectangleTest {
 
 	@Test
 	public void testConstructor() {
-		Point coordonnees[] = { new Point(3,2), new Point(4,3), new Point(3,3), new Point(4,2) };
+		Point[] coordonnees = { new Point(3,2), new Point(4,3), new Point(3,3), new Point(4,2) };
 		Polygone rect = new Rectangle(coordonnees);
+	}
+	
+	@Test
+	public void testSommetsToCoordonnees() {
+		Point[] coordonnees = { new Point(3,3), new Point(4,3), new Point(4,2), new Point(3,2) };
+		coordonnees.equals(Rectangle.sommetsToCoordonnees(coordonnees[0], coordonnees[2]));
 	}
 
 	@Test
