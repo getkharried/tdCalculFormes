@@ -10,7 +10,7 @@ public class TriangleTest
   
     
     @Test
-    public void testsurface(){
+    public void testSurface(){
 
         Polygone tri = new Triangle(new Point(-3,4),new Point(-3,-4),new Point(3,-4));
         assertEquals(24,tri.getPerimeter(),0.0001);
