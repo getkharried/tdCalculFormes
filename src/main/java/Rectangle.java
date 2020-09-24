@@ -12,7 +12,7 @@ public class Rectangle extends Polygone {
 	public Rectangle(Point[] coordonnees) throws IllegalArgumentException {
 		super(coordonnees);
 		
-		boolean error = false;
+		/*boolean error = false;
 		
 		for(Point pointTestX : coordonnees) {
 			int checkMemeX = 0;
@@ -38,7 +38,7 @@ public class Rectangle extends Polygone {
 			if(checkMemeY < 2) error = true;
 		}
 		
-		if(error) throw new IllegalArgumentException("Le rectangle n'est pas plat !");
+		if(error) throw new IllegalArgumentException("Le rectangle n'est pas plat !");*/
 	}
 	
 	public Rectangle(Point sg, Point id) {
